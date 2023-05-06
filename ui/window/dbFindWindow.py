@@ -18,8 +18,6 @@ from PySide6.QtTest import QTest
 import asyncio
 import aiomysql
 
-import mysql.connector
-
 from ui.base.dbFind_ui import Ui_MainWindow
 from utils.Config import Config
 
