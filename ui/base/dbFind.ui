@@ -6,26 +6,26 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>584</width>
-    <height>685</height>
+    <width>646</width>
+    <height>771</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>dbFind</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout_1">
       <item>
-       <widget class="QLabel" name="label_1">
+       <widget class="QLabel" name="label_PK">
         <property name="text">
-         <string>Student Number</string>
+         <string>PK</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_1"/>
+       <widget class="QLineEdit" name="lineEdit_PK"/>
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_1">
@@ -36,20 +36,20 @@
       </item>
      </layout>
     </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="label_SN2">
         <property name="text">
          <string>Student Name</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_2"/>
+       <widget class="QLineEdit" name="lineEdit_SN2"/>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="pushButton_3">
         <property name="text">
          <string>Find</string>
         </property>
@@ -57,32 +57,7 @@
       </item>
      </layout>
     </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string>Text3</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_4">
-        <property name="text">
-         <string>Text4</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_5">
-        <property name="text">
-         <string>Text5</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
+    <item row="5" column="0" colspan="2">
      <widget class="QTableWidget" name="tableWidget">
       <attribute name="horizontalHeaderVisible">
        <bool>true</bool>
@@ -99,6 +74,11 @@
       <attribute name="verticalHeaderStretchLastSection">
        <bool>false</bool>
       </attribute>
+      <column>
+       <property name="text">
+        <string>고유번호</string>
+       </property>
+      </column>
       <column>
        <property name="text">
         <string>학번</string>
@@ -121,6 +101,83 @@
       </column>
      </widget>
     </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_SN1">
+        <property name="text">
+         <string>Student Id</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_SN1"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>Find</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QLabel" name="label_1">
+        <property name="text">
+         <string>Text3</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Text4</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Text5</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>All Find</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_SA">
+        <property name="text">
+         <string>Student Amount</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_SA"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="text">
+         <string>Find</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -128,7 +185,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>584</width>
+     <width>646</width>
      <height>22</height>
     </rect>
    </property>

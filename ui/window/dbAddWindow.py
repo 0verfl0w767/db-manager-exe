@@ -17,6 +17,7 @@ from PySide6.QtWidgets import QMainWindow, QMessageBox
 import mysql.connector
 
 from ui.base.dbAdd_ui import Ui_MainWindow
+from utils.Config import Config
 
 # from PySide6.QtUiTools import loadUiType
 # form_class = loadUiType('./base/dbAdd.ui')[0]
@@ -29,7 +30,7 @@ class dbAddWindow(QMainWindow):
 
 class Ui_MainWindow_Override(Ui_MainWindow):
   def __init__(self):
-    pass
+    self.config = Config()
   
   def setupUi(self, MainWindow):
     super().setupUi(MainWindow)
@@ -50,12 +51,13 @@ class Ui_MainWindow_Override(Ui_MainWindow):
       button = warning.exec()
       return
     try:
+      mysql_config = self.config.getData('mysql_config.json')
       cnx = mysql.connector.connect(
-        user='root',
-        password='test1234',
-        host='160.251.7.140',
-        port='3306',
-        database='cs'
+        host=mysql_config['host'],
+        port=mysql_config['port'],
+        user=mysql_config['user'],
+        password=mysql_config['password'],
+        database=mysql_config['database']
       )
       cursor = cnx.cursor()
       SQL = 'INSERT INTO user (student_id, student_name, student_amount, student_note) VALUES(%s, %s, %s, %s)'
